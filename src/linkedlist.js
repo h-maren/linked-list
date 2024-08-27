@@ -24,6 +24,7 @@ class LinkedList {
             console.log(current);
         }
         current.nextNode = newNode;
+        this.tail = newNode;
         console.log("ran once!");
         this.size++;
     };
@@ -36,12 +37,56 @@ class LinkedList {
             this.size++;
             return;
         }
-        newNode.next = this.head;
-        newNode.next = this.head;
+        newNode.nextNode = this.head;
         this.head = newNode;
         this.size++;
         console.log(newNode);
         console.log(this);
+    };
+    at(index){
+        let currentNode=this.head;
+        console.log(currentNode);
+        let count=0;
+        while(currentNode){
+            if(count===index){
+                return currentNode;
+            }
+            count++;
+            console.log(count);
+            currentNode=currentNode.nextNode;
+            console.log(currentNode);
+        };
+    };
+    pop () {
+        let currentNode=this.tail;
+        return currentNode;
+    };
+    contains (value) {
+        let currentNode=this.head;
+        let count=0;
+        while(currentNode){
+            if(value===currentNode.data){
+                return true;
+            }
+            count++;
+            currentNode=currentNode.nextNode;
+        };
+        return false;
+    };
+    find (value) {
+        let currentNode=this.head;
+        let count=0;
+        while(currentNode){
+            if(value===currentNode.data){
+                return count;
+            }
+            count++;
+            currentNode=currentNode.nextNode
+        };
+        return null;
+    };
+    toString(){
+
     };
 };
 

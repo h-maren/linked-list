@@ -15,6 +15,15 @@ console.log(listtwo.size);
 console.log(listtwo.head);
 console.log(listtwo.tail);
 
-console.log(list.toString());
+console.log(list.at(2));
+console.log(listtwo.at(1));
 
-console.log("testing!");
+console.log(list.pop());
+console.log(listtwo.pop());
+
+console.log(list.find("cat"));
+console.log(listtwo.find("cat"));
+console.log(listtwo.find("blue"));
+
+console.log(list.contains("dog"));
+console.log(list.contains("blue"));
