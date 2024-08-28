@@ -1,2 +1,3 @@
-# template
-template for webpack and basic site
+LinkedList Demonstration
+
+Using javascript to demonstrate linked list concept
